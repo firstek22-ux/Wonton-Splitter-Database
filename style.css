@@ -144,3 +144,94 @@ color:#666;
 font-size:12px;
 
 }
+
+
+
+
+.login-btn{
+
+position:absolute;
+
+right:20px;
+
+top:20px;
+
+background:#222;
+
+border:1px solid #777;
+
+color:white;
+
+padding:8px 15px;
+
+}
+
+
+.login-btn:hover{
+
+background:#900;
+
+}
+
+
+#postArea{
+
+display:none;
+
+background:white;
+
+color:black;
+
+padding:20px;
+
+margin:30px;
+
+border:1px solid #555;
+
+}
+
+
+#postArea input,
+#postArea textarea{
+
+width:100%;
+
+margin:10px 0;
+
+padding:10px;
+
+}
+
+
+#loginBox{
+
+display:none;
+
+position:fixed;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+background:#111;
+
+border:1px solid #777;
+
+padding:25px;
+
+z-index:20;
+
+}
+
+
+#loginBox input{
+
+display:block;
+
+margin:10px;
+
+padding:10px;
+
+}
