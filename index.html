@@ -2,83 +2,156 @@
 <html lang="zh-Hant">
 
 <head>
+
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>ISECR 異常組織資料庫</title>
+<title>餛飩分裂者</title>
+
 
 <style>
 
 body{
-    background:#111;
-    color:#ddd;
-    font-family:"Microsoft JhengHei",sans-serif;
-    text-align:center;
-    padding:40px;
+
+margin:0;
+
+background:#080808;
+
+color:#ddd;
+
+font-family:"Microsoft JhengHei",sans-serif;
+
 }
+
+
+
+header{
+
+text-align:center;
+
+padding:50px 20px 30px;
+
+}
+
+
+
+.title{
+
+font-size:55px;
+
+font-weight:bold;
+
+letter-spacing:8px;
+
+}
+
+
+
+.slogan{
+
+font-size:16px;
+
+color:#999;
+
+margin-top:15px;
+
+font-style:italic;
+
+}
+
+
+
+nav{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+border-top:1px solid #444;
+
+border-bottom:1px solid #444;
+
+padding:15px;
+
+}
+
 
 
 button{
 
-    background:#222;
-    color:white;
+background:#111;
 
-    border:1px solid #777;
+color:#ddd;
 
-    padding:18px 40px;
+border:1px solid #666;
 
-    font-size:22px;
+padding:12px 35px;
 
-    cursor:pointer;
+font-size:18px;
+
+cursor:pointer;
 
 }
+
 
 
 button:hover{
 
-    background:#444;
+background:#333;
 
 }
 
 
 
-#file{
+.content{
 
-    display:none;
+max-width:900px;
 
-    margin:30px auto;
+margin:40px auto;
 
-    max-width:800px;
-
-    text-align:left;
-
-    background:#161616;
-
-    border:1px solid #555;
-
-    padding:25px;
+padding:20px;
 
 }
 
 
-h1{
 
-    border-bottom:1px solid #777;
+.page{
 
-    padding-bottom:10px;
+display:none;
+
+background:#111;
+
+border:1px solid #444;
+
+padding:30px;
 
 }
 
 
-.red{
 
-color:#ff5555;
+.active{
+
+display:block;
+
+}
+
+
+
+h2{
+
+border-left:5px solid white;
+
+padding-left:15px;
 
 }
 
 
 
 </style>
+
 
 </head>
 
@@ -87,104 +160,117 @@ color:#ff5555;
 <body>
 
 
-<h2>
-ISECR 組織資料庫
-</h2>
+<header>
+
+<div class="title">
+
+餛飩分裂者
+
+</div>
 
 
-<button onclick="openFile()">
-🍜 餛飩分裂者
+<div class="slogan">
+
+Wonton is not a type of dumpling
+
+</div>
+
+
+</header>
+
+
+
+<nav>
+
+<button onclick="show('archive')">
+
+檔案庫
+
 </button>
 
 
+<button onclick="show('story')">
 
-<div id="file">
+系列故事
 
-
-<h1>
-GOI-WS-001：餛飩分裂者
-</h1>
+</button>
 
 
-<p>
-<b>組織名稱：</b>
-餛飩分裂者（Wonton Splinterers）
-</p>
+<button onclick="show('community')">
+
+社區活動
+
+</button>
 
 
-<p>
-<b>組織定位：</b>
-極端餛飩文化組織。
-</p>
+</nav>
 
 
 
-<h2>
-組織簡介
-</h2>
+
+<div class="content">
 
 
-<p>
-
-我們是餛飩分裂者。
-
-我們認為餛飩並非普通食物，而是一種超越飲食概念的文明象徵。
-
-我們反對將餛飩與其他食物混為一談，尤其反對「餃子同化論」。
-
-</p>
-
+<div id="archive" class="page active">
 
 
 <h2>
-主要理念
+檔案庫
 </h2>
 
 
-<ul>
-
-<li>餛飩具有獨立文明地位</li>
-
-<li>反對餃子霸權</li>
-
-<li>推廣 Wons 理論</li>
-
-<li>建立餛飩主導的新秩序</li>
-
-</ul>
+<p>
+此處保存餛飩分裂者相關資料。
+</p>
 
 
+<p>
+包括組織歷史、行動記錄、成員資料以及重要事件。
+</p>
+
+
+</div>
+
+
+
+
+<div id="story" class="page">
 
 
 <h2>
-與基金會關係
+系列故事
 </h2>
 
 
 <p>
-
-基金會認為我們是一個危險的異常相關組織。
-
-我們認為基金會只是尚未理解餛飩真理的機構。
-
+記錄餛飩文明的歷史，以及我們與基金會、其他組織的衝突。
 </p>
 
 
+<p>
+「馄饨不是饺子。」
+</p>
 
-<h2 class="red">
 
-警告
+</div>
 
+
+
+
+<div id="community" class="page">
+
+
+<h2>
+社區活動
 </h2>
 
 
 <p>
-
-不要嘗試分析餛飩與餃子的本質差異。
-
-部分研究員已因此陷入不可逆的食物哲學混亂。
-
+加入討論，參與餛飩文化研究與相關活動。
 </p>
+
+
+</div>
 
 
 
@@ -195,25 +281,27 @@ GOI-WS-001：餛飩分裂者
 
 <script>
 
-function openFile(){
 
-let f=document.getElementById("file");
+function show(id){
 
-if(f.style.display==="block"){
+let pages=document.querySelectorAll(".page");
 
-f.style.display="none";
+
+pages.forEach(p=>{
+
+p.classList.remove("active");
+
+});
+
+
+document.getElementById(id).classList.add("active");
+
 
 }
 
-else{
-
-f.style.display="block";
-
-}
-
-}
 
 </script>
+
 
 
 </body>
