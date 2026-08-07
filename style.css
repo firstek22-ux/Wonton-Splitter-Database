@@ -1,9 +1,43 @@
 body{
-background:#111;
-color:#00ff88;
-font-family:monospace;
+    background:#000;
+    color:#fff;
+    font-family:
+    "Courier New",
+    "Microsoft JhengHei",
+    monospace;
+
+    margin:0;
+    padding:30px;
 }
 
+
 h1{
-border-bottom:1px solid #00ff88;
+    font-size:32px;
+    border-bottom:2px solid #fff;
+    padding-bottom:10px;
+}
+
+
+h2{
+    border-left:5px solid #fff;
+    padding-left:10px;
+}
+
+
+p{
+    line-height:1.8;
+}
+
+
+.document{
+    border:1px solid #fff;
+    padding:20px;
+    margin-top:20px;
+}
+
+
+.redacted{
+    background:#fff;
+    color:#fff;
+    padding:0 5px;
 }
