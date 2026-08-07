@@ -49,6 +49,24 @@ padding-left:15px;
 }
 
 
+.logo{
+
+text-align:center;
+
+margin:25px 0;
+
+}
+
+/* 算了就放這裡吧，qwq */
+
+.logo img{
+
+width:180px;
+
+height:auto;
+
+}
+
 
 nav{
 
