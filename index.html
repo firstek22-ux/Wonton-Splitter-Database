@@ -4,13 +4,16 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>餛飩分裂者</title>
 
-
 <style>
+
+*{
+    box-sizing:border-box;
+}
+
 
 body{
 
@@ -20,7 +23,9 @@ background:#080808;
 
 color:#ddd;
 
-font-family:"Microsoft JhengHei",sans-serif;
+font-family:
+"Microsoft JhengHei",
+sans-serif;
 
 }
 
@@ -30,33 +35,33 @@ header{
 
 text-align:center;
 
-padding:50px 20px 30px;
+padding:45px 10px 30px;
 
 }
-
 
 
 .title{
 
-font-size:55px;
+font-size:50px;
 
 font-weight:bold;
 
-letter-spacing:8px;
+letter-spacing:6px;
+
+white-space:nowrap;
 
 }
 
 
-
 .slogan{
 
-font-size:16px;
+margin-top:12px;
+
+font-size:15px;
 
 color:#999;
 
-margin-top:15px;
-
-font-style:italic;
+white-space:nowrap;
 
 }
 
@@ -68,37 +73,37 @@ display:flex;
 
 justify-content:center;
 
-gap:20px;
+gap:12px;
+
+padding:15px;
 
 border-top:1px solid #444;
 
 border-bottom:1px solid #444;
 
-padding:15px;
-
 }
 
 
+nav button{
 
-button{
+background:#151515;
 
-background:#111;
+border:1px solid #777;
 
-color:#ddd;
+color:white;
 
-border:1px solid #666;
+padding:10px 18px;
 
-padding:12px 35px;
+font-size:16px;
 
-font-size:18px;
+white-space:nowrap;
 
 cursor:pointer;
 
 }
 
 
-
-button:hover{
+nav button:hover{
 
 background:#333;
 
@@ -106,45 +111,94 @@ background:#333;
 
 
 
-.content{
-
-max-width:900px;
-
-margin:40px auto;
-
-padding:20px;
-
-}
 
 
+/* 彈窗 */
 
-.page{
+.window{
 
 display:none;
 
+position:fixed;
+
+top:50%;
+
+left:50%;
+
+transform:translate(-50%,-50%);
+
+width:85%;
+
+max-width:500px;
+
 background:#111;
 
-border:1px solid #444;
+border:1px solid #777;
 
-padding:30px;
+padding:25px;
+
+z-index:10;
 
 }
 
 
 
-.active{
+.window h2{
+
+margin-top:0;
+
+border-left:4px solid white;
+
+padding-left:10px;
+
+}
+
+
+
+.window button{
 
 display:block;
 
+width:100%;
+
+margin:10px 0;
+
+background:#222;
+
+color:white;
+
+border:1px solid #666;
+
+padding:12px;
+
+font-size:16px;
+
+cursor:pointer;
+
 }
 
 
 
-h2{
+.close{
 
-border-left:5px solid white;
+background:#500!important;
 
-padding-left:15px;
+}
+
+
+
+
+.mask{
+
+display:none;
+
+position:fixed;
+
+inset:0;
+
+background:rgba(0,0,0,.7);
+
+z-index:5;
 
 }
 
@@ -163,16 +217,12 @@ padding-left:15px;
 <header>
 
 <div class="title">
-
 餛飩分裂者
-
 </div>
 
 
 <div class="slogan">
-
 Wonton is not a type of dumpling
-
 </div>
 
 
@@ -182,99 +232,81 @@ Wonton is not a type of dumpling
 
 <nav>
 
-<button onclick="show('archive')">
-
+<button onclick="openBox('archive')">
 檔案庫
-
 </button>
 
 
-<button onclick="show('story')">
-
+<button onclick="openBox('story')">
 系列故事
-
 </button>
 
 
-<button onclick="show('community')">
-
+<button onclick="openBox('community')">
 社區活動
-
 </button>
-
 
 </nav>
 
 
 
 
-<div class="content">
+
+<div class="mask" id="mask" onclick="closeBox()"></div>
 
 
-<div id="archive" class="page active">
 
+<div class="window" id="archive">
 
-<h2>
-檔案庫
-</h2>
+<h2>檔案庫</h2>
 
+<button>組織介紹</button>
+<button>成員資料</button>
+<button>行動記錄</button>
+<button>重要事件</button>
 
-<p>
-此處保存餛飩分裂者相關資料。
-</p>
-
-
-<p>
-包括組織歷史、行動記錄、成員資料以及重要事件。
-</p>
-
+<button class="close" onclick="closeBox()">
+關閉
+</button>
 
 </div>
 
 
 
 
-<div id="story" class="page">
 
+<div class="window" id="story">
 
-<h2>
-系列故事
-</h2>
+<h2>系列故事</h2>
 
+<button>阿齊事件</button>
+<button>春节晚會突襲</button>
+<button>Legendary計畫</button>
 
-<p>
-記錄餛飩文明的歷史，以及我們與基金會、其他組織的衝突。
-</p>
-
-
-<p>
-「馄饨不是饺子。」
-</p>
-
+<button class="close" onclick="closeBox()">
+關閉
+</button>
 
 </div>
 
 
 
 
-<div id="community" class="page">
 
+<div class="window" id="community">
 
-<h2>
-社區活動
-</h2>
+<h2>社區活動</h2>
 
+<button>討論區</button>
+<button>活動公告</button>
+<button>加入組織</button>
 
-<p>
-加入討論，參與餛飩文化研究與相關活動。
-</p>
-
-
-</div>
-
-
+<button class="close" onclick="closeBox()">
+關閉
+</button>
 
 </div>
+
 
 
 
@@ -282,20 +314,26 @@ Wonton is not a type of dumpling
 <script>
 
 
-function show(id){
+function openBox(id){
 
-let pages=document.querySelectorAll(".page");
+document.getElementById("mask").style.display="block";
+
+document.getElementById(id).style.display="block";
+
+}
 
 
-pages.forEach(p=>{
 
-p.classList.remove("active");
+function closeBox(){
+
+document.getElementById("mask").style.display="none";
+
+
+document.querySelectorAll(".window").forEach(e=>{
+
+e.style.display="none";
 
 });
-
-
-document.getElementById(id).classList.add("active");
-
 
 }
 
