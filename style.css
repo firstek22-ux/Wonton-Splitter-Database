@@ -1,17 +1,22 @@
 body {
-    background:#f5f5f5;
-    font-family: Arial;
+    background:#eeeeee;
+    font-family:Arial;
 }
 
 h1 {
     background:#3366cc;
     color:white;
-    padding:15px;
+    padding:10px;
 }
 
-.forum {
+.forum, .post {
     background:white;
-    border:1px solid #ccc;
+    border:1px solid #cccccc;
     margin:10px;
     padding:10px;
+}
+
+a {
+    color:#0000cc;
+    text-decoration:none;
 }
